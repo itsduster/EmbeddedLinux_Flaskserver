@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Picture Captured</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <h3>Picture Captured Successfully</h3>
+        <p>Here is the image you captured:</p>
+        <img src="{{ url_for('static', filename='captured_images/' + filename) }}" style="width: 50%; border: 1px solid #ccc;" alt="Captured Image">
+        <br><br>
+        <a href="/" class="btn waves-effect waves-light">Capture Another Picture</a>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+</body>
+</html>

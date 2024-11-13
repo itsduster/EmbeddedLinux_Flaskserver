@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Click a Pic</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" rel="stylesheet">
+    <style>
+        .container { margin-top: 50px; text-align: center; }
+        .video-container { margin: auto; width: 50%; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h3>Click a Pic</h3>
+        <p>To start, ensure your webcam is connected. Click "Open Camera" to display live camera feed.</p>
+        <div class="video-container">
+            <h5>Live Camera Feed</h5>
+            <img src="{{ url_for('video_feed') }}" style="width: 100%; border: 1px solid #ccc;" alt="Live Camera Feed">
+        </div>
+        <form action="/capture" method="post">
+            <button type="submit" class="btn waves-effect waves-light" style="margin-top: 20px;">Click to Capture Picture</button>
+        </form>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+</body>
+</html>
+
